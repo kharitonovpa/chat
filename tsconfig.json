@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": ["@types/node", "@nuxt/types"]
+  },
+  "include": ["server/**/*.ts", "components/**/*.vue", "pages/**/*.vue", "layouts/**/*.vue", "plugins/**/*.ts", "typings/**/*.d.ts", "nuxt.config.ts"]
+}
