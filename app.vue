@@ -9,6 +9,7 @@
 </template>
 
 <script lang="ts">
+import io from 'socket.io-client'
 
 export default defineComponent({
   setup() {
@@ -17,7 +18,10 @@ export default defineComponent({
     let socket: WebSocket;
 
     onMounted(() => {
-      socket = new WebSocket(`ws://localhost:3001`);
+      console.log('location.protocol', location.origin)
+      console.log('location.host', location.host)
+      socket = io(location.origin);
+      console.log('socket', socket)
 
       socket.addEventListener('message', (event) => {
         messages.value.push(event.data);

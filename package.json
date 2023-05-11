@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "nuxt dev",
     "start:ws": "node ./server.js",
