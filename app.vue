@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ messages }}
     <input v-model="message" @keyup.enter="sendMessage" />
     <button @click="sendMessage">Send</button>
     <ul>
@@ -24,6 +25,7 @@ export default defineComponent({
       console.log('socket', socket)
 
       socket.addEventListener('message', (event) => {
+        console.log('event', event)
         messages.value.push(event.data);
       });
     });

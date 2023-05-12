@@ -4,7 +4,6 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev",
-    "start:ws": "node ./server.js",
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",

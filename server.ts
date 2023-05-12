@@ -3,6 +3,7 @@ import { defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
   setup(options, nuxt) {
+    console.log('sssssss+sssssssss')
     nuxt.hook('listen', (server) => {
       console.log('Socket listen', server.address(), server.eventNames())
       const io = new Server(server)
